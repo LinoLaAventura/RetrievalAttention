@@ -410,3 +410,5 @@ benchmark/reasoning/outputs
 
 !benchmark/reasoning/data/**/*.jsonl
 !asserts/*.png
+
+.venv/
