@@ -24,7 +24,7 @@ def parse_args():
     parser.add_argument("--data_names", default="aime24", type=str, choices=["aime24", "gpqa"])
     parser.add_argument("--data_dir", default="./data", type=str)
     parser.add_argument("--model_name_or_path", default="deepseek-ai/DeepSeek-R1-Distill-Llama-8B", type=str, 
-                        )
+                        choices=["deepseek-ai/DeepSeek-R1-Distill-Llama-8B", "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"])
     parser.add_argument("--output_dir", default="./outputs", type=str)
     parser.add_argument("--prompt_type", default="orz", type=str)
     parser.add_argument("--split", default="test", type=str)
