@@ -22,7 +22,7 @@ ARG ALLOW_CUTLASS_CLONE=1
 ARG BUILD_RETROINFER_KERNELS=1
 # 3) 是否安装 reasoning 相关依赖（只做简单推理可设为 0）
 ARG INSTALL_REASONING_DEPS=1
-# 4) 是否安装官方 weighted_flash_decoding（建议保持 1）
+# 4) 是否安装上游 weighted_flash_decoding 官方实现（建议保持 1）
 ARG INSTALL_WEIGHTED_FLASH_DECODING=1
 
 ENV HF_ENDPOINT=${HF_ENDPOINT}
@@ -105,7 +105,18 @@ RUN set -eux; \
       echo "WARNING: BUILD_RETROINFER_KERNELS=0, runtime may fail if extension is required"; \
     fi
 
-# 8. 可选安装 Reasoning Benchmark 依赖
+# 8. 安装 weighted_flash_decoding 官方实现（来自 Starmys/flash-attention@weighted）
+# 注意：这是 RetroInfer 解码路径的关键依赖，缺失会触发 ModuleNotFoundError。
+RUN set -eux; \
+    if [[ "${INSTALL_WEIGHTED_FLASH_DECODING}" == "1" ]]; then \
+      retry() { n=0; until [[ $n -ge 5 ]]; do "$@" && break; n=$((n+1)); echo "retry $n/5: $*"; sleep 10; done; [[ $n -lt 5 ]]; }; \
+      export GIT_HTTP_VERSION=1.1; \
+      retry pip install --no-build-isolation git+https://github.com/Starmys/flash-attention.git@weighted; \
+    else \
+      echo "WARNING: INSTALL_WEIGHTED_FLASH_DECODING=0, runtime may fail for RetroInfer path"; \
+    fi
+
+# 9. 可选安装 Reasoning Benchmark 依赖
 RUN set -eux; \
     if [[ "${INSTALL_REASONING_DEPS}" == "1" ]]; then \
       cd benchmark/reasoning/latex2sympy && pip install -e . && cd ../../..; \
@@ -114,7 +125,7 @@ RUN set -eux; \
       echo "skip reasoning dependencies"; \
     fi
 
-# 9. 轻量验收（仅导入，不下载模型）
+# 10. 轻量验收（仅导入，不下载模型）
 RUN python3 - <<'PY'
 import importlib
 importlib.import_module('weighted_flash_decoding')
