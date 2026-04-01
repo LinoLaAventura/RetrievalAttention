@@ -12,6 +12,8 @@ ARG APT_MIRROR=
 ARG PIP_INDEX_URL=https://pypi.org/simple
 ARG PIP_EXTRA_INDEX_URL=
 ARG HF_ENDPOINT=https://hf-mirror.com
+ARG WEIGHTED_FLASH_ATTN_REPO=https://github.com/Starmys/flash-attention.git
+ARG WEIGHTED_FLASH_ATTN_BRANCH=weighted
 
 # 可选开关：
 # 1) 如果源码里没有 `library/cutlass`，是否允许在构建时在线 clone
@@ -20,6 +22,8 @@ ARG ALLOW_CUTLASS_CLONE=1
 ARG BUILD_RETROINFER_KERNELS=1
 # 3) 是否安装 reasoning 相关依赖（只做简单推理可设为 0）
 ARG INSTALL_REASONING_DEPS=1
+# 4) 是否安装官方 weighted_flash_decoding（建议保持 1）
+ARG INSTALL_WEIGHTED_FLASH_DECODING=1
 
 ENV HF_ENDPOINT=${HF_ENDPOINT}
 ENV PIP_INDEX_URL=${PIP_INDEX_URL}
@@ -64,6 +68,12 @@ RUN set -eux; \
       retry pip install -r /workspace/RetroInfer/requirements.txt; \
       retry pip install flash-attn==2.7.3 --no-build-isolation; \
       retry pip install flashinfer-python==0.2.4 -i https://flashinfer.ai/whl/cu124/torch2.5/; \
+    fi; \
+    if [[ "${INSTALL_WEIGHTED_FLASH_DECODING}" == "1" ]]; then \
+      retry pip install --no-build-isolation "git+${WEIGHTED_FLASH_ATTN_REPO}@${WEIGHTED_FLASH_ATTN_BRANCH}"; \
+      python3 -c "import importlib; importlib.import_module('weighted_flash_decoding'); print('weighted_flash_decoding install check ok')"; \
+    else \
+      echo "skip weighted_flash_decoding install"; \
     fi
 
 # 5. 复制完整源码
