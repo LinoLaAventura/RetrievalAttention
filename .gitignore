@@ -430,11 +430,36 @@ benchmark/reasoning/outputs/outputs_paper_like_compare30_daemon/*
 !benchmark/reasoning/outputs/outputs_paper_like_compare30_daemon/aime24/test_orz_-1_seed2025_RetroInfer_budget0.018_es0.232_04-03_10-53.jsonl
 !benchmark/reasoning/outputs/outputs_paper_like_compare30_daemon/aime24/test_orz_-1_seed2025_RetroInfer_budget0.018_es0.232_04-03_10-53_orz_metrics.json
 
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/
+benchmark/reasoning/outputs/outputs_quick_kv_bench/*
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/
+benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/*
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_Full_Flash_Attn_budget0.018_es0.232_04-04_18-54.jsonl
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_Full_Flash_Attn_budget0.018_es0.232_04-04_18-54_orz_metrics.json
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_RetroInfer_budget0.018_es0.232_04-04_18-58.jsonl
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_RetroInfer_budget0.018_es0.232_04-04_18-58_orz_metrics.json
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_Full_Flash_Attn_budget0.018_es0.232_04-04_19-10.jsonl
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_Full_Flash_Attn_budget0.018_es0.232_04-04_19-10_orz_metrics.json
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_RetroInfer_budget0.018_es0.232_04-04_19-15.jsonl
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_RetroInfer_budget0.018_es0.232_04-04_19-15_orz_metrics.json
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_Full_Flash_Attn_budget0.018_es0.232_04-04_19-32.jsonl
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_Full_Flash_Attn_budget0.018_es0.232_04-04_19-32_orz_metrics.json
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_RetroInfer_budget0.018_es0.232_04-04_19-36.jsonl
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_RetroInfer_budget0.018_es0.232_04-04_19-36_orz_metrics.json
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_Full_Flash_Attn_budget0.018_es0.232_04-04_23-14.jsonl
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_Full_Flash_Attn_budget0.018_es0.232_04-04_23-14_orz_metrics.json
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_RetroInfer_budget0.018_es0.232_04-04_23-18.jsonl
+!benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_RetroInfer_budget0.018_es0.232_04-04_23-18_orz_metrics.json
+
 !benchmark/reasoning/logs/
 benchmark/reasoning/logs/*
 !benchmark/reasoning/logs/full_bs1_aime24_30.log
 !benchmark/reasoning/logs/retro_bs1_aime24_30.log
 !benchmark/reasoning/logs/full_paperlike_daemon.log
 !benchmark/reasoning/logs/retro_paperlike_daemon.log
+!benchmark/reasoning/logs/quick_kv_bench_r1.log
+!benchmark/reasoning/logs/quick_kv_bench_r2.log
+!benchmark/reasoning/logs/quick_kv_bench_r3.log
+!benchmark/reasoning/logs/quick_kv_bench_r4.log
 
 .venv/

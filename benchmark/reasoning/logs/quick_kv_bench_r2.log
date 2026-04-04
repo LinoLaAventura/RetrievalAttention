@@ -1,0 +1,262 @@
+Random seed set as 2025
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.32it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.34it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.33it/s]
+30 examples loaded.
+4 examples to eval. idx range: 0 to 3
+==================================================
+data: aime24 , eval samples: 4
+data example: {'idx': 0, 'id': 60, 'problem': 'Every morning Aya goes for a $9$-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of $s$ kilometers per hour, the walk takes her 4 hours, including $t$ minutes spent in the coffee shop. When she walks $s+2$ kilometers per hour, the walk takes her 2 hours and 24 minutes, including $t$ minutes spent in the coffee shop. Suppose Aya walks at $s+\\frac{1}{2}$ kilometers per hour. Find the number of minutes the walk takes her, including the $t$ minutes spent in the coffee shop.', 'solution': '$\\frac{9}{s} + t = 4$ in hours and $\\frac{9}{s+2} + t = 2.4$ in hours.\nSubtracting the second equation from the first, we get, \n$\\frac{9}{s} - \\frac{9}{s+2} = 1.6$\nMultiplying by $(s)(s+2)$, we get \n$9s+18-9s=18=1.6s^{2} + 3.2s$\nMultiplying by 5/2 on both sides, we get\n$0 = 4s^{2} + 8s - 45$\nFactoring gives us \n$(2s-5)(2s+9) = 0$, of which the solution we want is $s=2.5$.\nSubstituting this back to the first equation, we can find that $t = 0.4$ hours.\nLastly, $s + \\frac{1}{2} = 3$ kilometers per hour, so\n$\\frac{9}{3} + 0.4 = 3.4$ hours, or $\\framebox{204}$ minutes\n-Failure.net\nThe amount of hours spent while walking on the first travel is $\\frac{240-t}{6}$. Thus, we have the equation $(240-t)(s) = 540$, and by the same logic, the second equation yields $(144-t)(s+2) = 540$. We have $240s-st = 540$, and $288+144s-2t-st = 540$. We subtract the two equations to get $96s+2t-288 = 0$, so we have $48s+t = 144$, so $t = 144-48s$, and now we have $(96+48s)(s) = 540$. The numerator of $s$ must evenly divide 540, however, $s$ must be less than 3. We can guess that $s = 2.5$. Now, $2.5+0.5 = 3$. Taking $\\frac{9}{3} = 3$, we find that it will take three hours for the 9 kilometers to be traveled. The t minutes spent at the coffeeshop can be written as $144-48(2.5)$, so t = 24. $180 + 24 = 204$. -sepehr2010', 'answer': '204', 'url': 'https://artofproblemsolving.com/wiki/index.php/2024_AIME_I_Problems/Problem_1', 'question': 'Every morning Aya goes for a $9$-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of $s$ kilometers per hour, the walk takes her 4 hours, including $t$ minutes spent in the coffee shop. When she walks $s+2$ kilometers per hour, the walk takes her 2 hours and 24 minutes, including $t$ minutes spent in the coffee shop. Suppose Aya walks at $s+\\frac{1}{2}$ kilometers per hour. Find the number of minutes the walk takes her, including the $t$ minutes spent in the coffee shop.'}
+
+  0%|          | 0/4 [00:00<?, ?it/s]A conversation between User and Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer. The reasoning process is enclosed within <think> </think> and answer is enclosed within <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>. User: You must put your answer inside <answer> </answer> tags, i.e., <answer> answer here </answer>. And your final answer will be extracted automatically by the \boxed{} tag.
+This is the problem:
+Every morning Aya goes for a $9$-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of $s$ kilometers per hour, the walk takes her 4 hours, including $t$ minutes spent in the coffee shop. When she walks $s+2$ kilometers per hour, the walk takes her 2 hours and 24 minutes, including $t$ minutes spent in the coffee shop. Suppose Aya walks at $s+\frac{1}{2}$ kilometers per hour. Find the number of minutes the walk takes her, including the $t$ minutes spent in the coffee shop.
+Assistant: <think>
+100%|██████████| 4/4 [00:00<00:00, 196.92it/s]
+Generating Completions:   0%|          | 0/4 [00:00<?, ?it/s]
+--------------------- Test Data 0 ---------------------
+['A conversation between User and Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer. The reasoning process is enclosed within <think> </think> and answer is enclosed within <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>. User: You must put your answer inside <answer> </answer> tags, i.e., <answer> answer here </answer>. And your final answer will be extracted automatically by the \\boxed{} tag.\nThis is the problem:\nEvery morning Aya goes for a $9$-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of $s$ kilometers per hour, the walk takes her 4 hours, including $t$ minutes spent in the coffee shop. When she walks $s+2$ kilometers per hour, the walk takes her 2 hours and 24 minutes, including $t$ minutes spent in the coffee shop. Suppose Aya walks at $s+\\frac{1}{2}$ kilometers per hour. Find the number of minutes the walk takes her, including the $t$ minutes spent in the coffee shop.\nAssistant: <think>']
+Allocate GPU buffers and CPU pin memory ...
+Start prefilling ...
+Prefilling latency: 0.2782 s
+Start decoding ...
+Decoding latency: 51.3123 s (25.07 ms/step), Throughput: 39.89 tokens/s
+End2End Latency: 51.5905 s
+
+preds for test data 0: 
+['144']
+Generating Completions:  25%|██▌       | 1/4 [00:51<02:35, 51.71s/it]
+--------------------- Test Data 1 ---------------------
+['A conversation between User and Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer. The reasoning process is enclosed within <think> </think> and answer is enclosed within <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>. User: You must put your answer inside <answer> </answer> tags, i.e., <answer> answer here </answer>. And your final answer will be extracted automatically by the \\boxed{} tag.\nThis is the problem:\nLet $ABC$ be a triangle inscribed in circle $\\omega$. Let the tangents to $\\omega$ at $B$ and $C$ intersect at point $D$, and let $\\overline{AD}$ intersect $\\omega$ at $P$. If $AB=5$, $BC=9$, and $AC=10$, $AP$ can be written as the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime integers. Find $m + n$.\nAssistant: <think>']
+Allocate GPU buffers and CPU pin memory ...
+Start prefilling ...
+Prefilling latency: 0.0468 s
+Start decoding ...
+Decoding latency: 51.4285 s (25.12 ms/step), Throughput: 39.8 tokens/s
+End2End Latency: 51.4753 s
+
+preds for test data 1: 
+['6']
+Generating Completions:  50%|█████     | 2/4 [01:43<01:43, 51.63s/it]
+--------------------- Test Data 2 ---------------------
+['A conversation between User and Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer. The reasoning process is enclosed within <think> </think> and answer is enclosed within <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>. User: You must put your answer inside <answer> </answer> tags, i.e., <answer> answer here </answer>. And your final answer will be extracted automatically by the \\boxed{} tag.\nThis is the problem:\nEach vertex of a regular octagon is independently colored either red or blue with equal probability. The probability that the octagon can then be rotated so that all of the blue vertices end up at positions where there were originally red vertices is $\\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?\nAssistant: <think>']
+Allocate GPU buffers and CPU pin memory ...
+Start prefilling ...
+Prefilling latency: 0.0468 s
+Start decoding ...
+Decoding latency: 51.2697 s (25.05 ms/step), Throughput: 39.93 tokens/s
+End2End Latency: 51.3164 s
+
+preds for test data 2: 
+['8']
+Generating Completions:  75%|███████▌  | 3/4 [02:34<00:51, 51.53s/it]
+--------------------- Test Data 3 ---------------------
+['A conversation between User and Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer. The reasoning process is enclosed within <think> </think> and answer is enclosed within <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>. User: You must put your answer inside <answer> </answer> tags, i.e., <answer> answer here </answer>. And your final answer will be extracted automatically by the \\boxed{} tag.\nThis is the problem:\nDefine $f(x)=|| x|-\\tfrac{1}{2}|$ and $g(x)=|| x|-\\tfrac{1}{4}|$. Find the number of intersections of the graphs of \\[y=4 g(f(\\sin (2 \\pi x))) \\quad\\text{ and }\\quad x=4 g(f(\\cos (3 \\pi y))).\\]\nAssistant: <think>']
+Allocate GPU buffers and CPU pin memory ...
+Start prefilling ...
+Prefilling latency: 0.0472 s
+Start decoding ...
+Decoding latency: 51.1401 s (24.98 ms/step), Throughput: 40.03 tokens/s
+End2End Latency: 51.1873 s
+
+preds for test data 3: 
+['2']
+Generating Completions: 100%|██████████| 4/4 [03:25<00:00, 51.43s/it]Generating Completions: 100%|██████████| 4/4 [03:25<00:00, 51.50s/it]
+
+==================== execute the remain prompts ====================
+num of remain prompts: 0 == 0
+all prompts are processed, break.
+Unsolved samples: 0
+
+-------------
+all results:
+[('144', None), ('6', None), ('8', None), ('2', None)]
+-------------
+
+Evaluate:   0%|          | 0/4 [00:00<?, ?it/s]Evaluate: 100%|██████████| 4/4 [00:00<00:00, 12052.60it/s]
+
+-------------
+scores: [[False], [False], [False], [False]]
+-------------
+
+{'num_samples': 4, 'num_scores': 4, 'timeout_samples': 0, 'empty_samples': 0, 'avg_acc': 0.0, 'pass@1': 0.0}
+Saved to outputs/./outputs_quick_kv_bench/aime24/test_orz_4_seed2025_Full_Flash_Attn_budget0.018_es0.232_04-04_19-10.jsonl
+
+Pass@1:
+aime24	avg   
+0.0   	0.0   
+Random seed set as 2025
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.33it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.34it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.34it/s]
+30 examples loaded.
+4 examples to eval. idx range: 0 to 3
+==================================================
+data: aime24 , eval samples: 4
+data example: {'idx': 0, 'id': 60, 'problem': 'Every morning Aya goes for a $9$-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of $s$ kilometers per hour, the walk takes her 4 hours, including $t$ minutes spent in the coffee shop. When she walks $s+2$ kilometers per hour, the walk takes her 2 hours and 24 minutes, including $t$ minutes spent in the coffee shop. Suppose Aya walks at $s+\\frac{1}{2}$ kilometers per hour. Find the number of minutes the walk takes her, including the $t$ minutes spent in the coffee shop.', 'solution': '$\\frac{9}{s} + t = 4$ in hours and $\\frac{9}{s+2} + t = 2.4$ in hours.\nSubtracting the second equation from the first, we get, \n$\\frac{9}{s} - \\frac{9}{s+2} = 1.6$\nMultiplying by $(s)(s+2)$, we get \n$9s+18-9s=18=1.6s^{2} + 3.2s$\nMultiplying by 5/2 on both sides, we get\n$0 = 4s^{2} + 8s - 45$\nFactoring gives us \n$(2s-5)(2s+9) = 0$, of which the solution we want is $s=2.5$.\nSubstituting this back to the first equation, we can find that $t = 0.4$ hours.\nLastly, $s + \\frac{1}{2} = 3$ kilometers per hour, so\n$\\frac{9}{3} + 0.4 = 3.4$ hours, or $\\framebox{204}$ minutes\n-Failure.net\nThe amount of hours spent while walking on the first travel is $\\frac{240-t}{6}$. Thus, we have the equation $(240-t)(s) = 540$, and by the same logic, the second equation yields $(144-t)(s+2) = 540$. We have $240s-st = 540$, and $288+144s-2t-st = 540$. We subtract the two equations to get $96s+2t-288 = 0$, so we have $48s+t = 144$, so $t = 144-48s$, and now we have $(96+48s)(s) = 540$. The numerator of $s$ must evenly divide 540, however, $s$ must be less than 3. We can guess that $s = 2.5$. Now, $2.5+0.5 = 3$. Taking $\\frac{9}{3} = 3$, we find that it will take three hours for the 9 kilometers to be traveled. The t minutes spent at the coffeeshop can be written as $144-48(2.5)$, so t = 24. $180 + 24 = 204$. -sepehr2010', 'answer': '204', 'url': 'https://artofproblemsolving.com/wiki/index.php/2024_AIME_I_Problems/Problem_1', 'question': 'Every morning Aya goes for a $9$-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of $s$ kilometers per hour, the walk takes her 4 hours, including $t$ minutes spent in the coffee shop. When she walks $s+2$ kilometers per hour, the walk takes her 2 hours and 24 minutes, including $t$ minutes spent in the coffee shop. Suppose Aya walks at $s+\\frac{1}{2}$ kilometers per hour. Find the number of minutes the walk takes her, including the $t$ minutes spent in the coffee shop.'}
+
+  0%|          | 0/4 [00:00<?, ?it/s]A conversation between User and Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer. The reasoning process is enclosed within <think> </think> and answer is enclosed within <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>. User: You must put your answer inside <answer> </answer> tags, i.e., <answer> answer here </answer>. And your final answer will be extracted automatically by the \boxed{} tag.
+This is the problem:
+Every morning Aya goes for a $9$-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of $s$ kilometers per hour, the walk takes her 4 hours, including $t$ minutes spent in the coffee shop. When she walks $s+2$ kilometers per hour, the walk takes her 2 hours and 24 minutes, including $t$ minutes spent in the coffee shop. Suppose Aya walks at $s+\frac{1}{2}$ kilometers per hour. Find the number of minutes the walk takes her, including the $t$ minutes spent in the coffee shop.
+Assistant: <think>
+100%|██████████| 4/4 [00:00<00:00, 195.38it/s]
+Generating Completions:   0%|          | 0/4 [00:00<?, ?it/s]
+--------------------- Test Data 0 ---------------------
+['A conversation between User and Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer. The reasoning process is enclosed within <think> </think> and answer is enclosed within <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>. User: You must put your answer inside <answer> </answer> tags, i.e., <answer> answer here </answer>. And your final answer will be extracted automatically by the \\boxed{} tag.\nThis is the problem:\nEvery morning Aya goes for a $9$-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of $s$ kilometers per hour, the walk takes her 4 hours, including $t$ minutes spent in the coffee shop. When she walks $s+2$ kilometers per hour, the walk takes her 2 hours and 24 minutes, including $t$ minutes spent in the coffee shop. Suppose Aya walks at $s+\\frac{1}{2}$ kilometers per hour. Find the number of minutes the walk takes her, including the $t$ minutes spent in the coffee shop.\nAssistant: <think>']
+{'static_pattern_start': 4, 'static_pattern_end': 64, 'core': 14, 'n_centroids': 16, 'n_segment': 1, 'pages_per_cluster': 2, 'retrieval_budget': 0.018, 'estimation_budget': 0.232, 'cache_ratio': 0.0, 'buffer_cluster_num': 150, 'use_cuda_graph': False, 'gpu_only': False}
+Allocate GPU buffers and CPU pin memory ...
+Initial n_centroids: 0, nprobe: 0, es_cluster_num: 0
+Cache pages: 12, Buffer pages: 400
+Start prefilling ...
+Prefilling latency: 0.2669 s
+Start decoding ...
+nprobe: 1, es_cluster_num: 15, max_compute_cluster_num: 16, n_centroids: 64
+nprobe: 2, es_cluster_num: 30, max_compute_cluster_num: 32, n_centroids: 128
+Decoding latency: 57.0 s (27.85 ms/step), Throughput: 35.91 tokens/s
+End2End Latency: 57.2668 s
+
+preds for test data 0: 
+['']
+Generating Completions:  25%|██▌       | 1/4 [00:57<02:52, 57.47s/it]
+--------------------- Test Data 1 ---------------------
+['A conversation between User and Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer. The reasoning process is enclosed within <think> </think> and answer is enclosed within <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>. User: You must put your answer inside <answer> </answer> tags, i.e., <answer> answer here </answer>. And your final answer will be extracted automatically by the \\boxed{} tag.\nThis is the problem:\nLet $ABC$ be a triangle inscribed in circle $\\omega$. Let the tangents to $\\omega$ at $B$ and $C$ intersect at point $D$, and let $\\overline{AD}$ intersect $\\omega$ at $P$. If $AB=5$, $BC=9$, and $AC=10$, $AP$ can be written as the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime integers. Find $m + n$.\nAssistant: <think>']
+{'static_pattern_start': 4, 'static_pattern_end': 64, 'core': 14, 'n_centroids': 16, 'n_segment': 1, 'pages_per_cluster': 2, 'retrieval_budget': 0.018, 'estimation_budget': 0.232, 'cache_ratio': 0.0, 'buffer_cluster_num': 150, 'use_cuda_graph': False, 'gpu_only': False}
+Allocate GPU buffers and CPU pin memory ...
+Initial n_centroids: 0, nprobe: 0, es_cluster_num: 0
+Cache pages: 12, Buffer pages: 400
+Start prefilling ...
+Prefilling latency: 0.0468 s
+Start decoding ...
+nprobe: 1, es_cluster_num: 15, max_compute_cluster_num: 16, n_centroids: 64
+nprobe: 2, es_cluster_num: 30, max_compute_cluster_num: 32, n_centroids: 128
+Decoding latency: 56.684 s (27.69 ms/step), Throughput: 36.11 tokens/s
+End2End Latency: 56.7308 s
+
+preds for test data 1: 
+['14']
+Generating Completions:  50%|█████     | 2/4 [01:54<01:54, 57.10s/it]
+--------------------- Test Data 2 ---------------------
+['A conversation between User and Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer. The reasoning process is enclosed within <think> </think> and answer is enclosed within <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>. User: You must put your answer inside <answer> </answer> tags, i.e., <answer> answer here </answer>. And your final answer will be extracted automatically by the \\boxed{} tag.\nThis is the problem:\nEach vertex of a regular octagon is independently colored either red or blue with equal probability. The probability that the octagon can then be rotated so that all of the blue vertices end up at positions where there were originally red vertices is $\\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?\nAssistant: <think>']
+{'static_pattern_start': 4, 'static_pattern_end': 64, 'core': 14, 'n_centroids': 16, 'n_segment': 1, 'pages_per_cluster': 2, 'retrieval_budget': 0.018, 'estimation_budget': 0.232, 'cache_ratio': 0.0, 'buffer_cluster_num': 150, 'use_cuda_graph': False, 'gpu_only': False}
+Allocate GPU buffers and CPU pin memory ...
+Initial n_centroids: 0, nprobe: 0, es_cluster_num: 0
+Cache pages: 12, Buffer pages: 400
+Start prefilling ...
+Prefilling latency: 0.0471 s
+Start decoding ...
+nprobe: 1, es_cluster_num: 15, max_compute_cluster_num: 16, n_centroids: 64
+nprobe: 2, es_cluster_num: 30, max_compute_cluster_num: 32, n_centroids: 128
+Decoding latency: 56.4663 s (27.58 ms/step), Throughput: 36.25 tokens/s
+End2End Latency: 56.5134 s
+
+preds for test data 2: 
+['8']
+Generating Completions:  75%|███████▌  | 3/4 [02:50<00:56, 56.88s/it]
+--------------------- Test Data 3 ---------------------
+['A conversation between User and Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer. The reasoning process is enclosed within <think> </think> and answer is enclosed within <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>. User: You must put your answer inside <answer> </answer> tags, i.e., <answer> answer here </answer>. And your final answer will be extracted automatically by the \\boxed{} tag.\nThis is the problem:\nDefine $f(x)=|| x|-\\tfrac{1}{2}|$ and $g(x)=|| x|-\\tfrac{1}{4}|$. Find the number of intersections of the graphs of \\[y=4 g(f(\\sin (2 \\pi x))) \\quad\\text{ and }\\quad x=4 g(f(\\cos (3 \\pi y))).\\]\nAssistant: <think>']
+{'static_pattern_start': 4, 'static_pattern_end': 64, 'core': 14, 'n_centroids': 16, 'n_segment': 1, 'pages_per_cluster': 2, 'retrieval_budget': 0.018, 'estimation_budget': 0.232, 'cache_ratio': 0.0, 'buffer_cluster_num': 150, 'use_cuda_graph': False, 'gpu_only': False}
+Allocate GPU buffers and CPU pin memory ...
+Initial n_centroids: 0, nprobe: 0, es_cluster_num: 0
+Cache pages: 12, Buffer pages: 400
+Start prefilling ...
+Prefilling latency: 0.0471 s
+Start decoding ...
+nprobe: 1, es_cluster_num: 15, max_compute_cluster_num: 16, n_centroids: 64
+nprobe: 2, es_cluster_num: 30, max_compute_cluster_num: 32, n_centroids: 128
+Decoding latency: 56.3643 s (27.54 ms/step), Throughput: 36.32 tokens/s
+End2End Latency: 56.4114 s
+
+preds for test data 3: 
+['4']
+Generating Completions: 100%|██████████| 4/4 [03:47<00:00, 56.74s/it]Generating Completions: 100%|██████████| 4/4 [03:47<00:00, 56.86s/it]
+
+==================== execute the remain prompts ====================
+num of remain prompts: 0 == 0
+all prompts are processed, break.
+Unsolved samples: 0
+
+-------------
+all results:
+[('', None), ('14', None), ('8', None), ('4', None)]
+-------------
+
+Evaluate:   0%|          | 0/4 [00:00<?, ?it/s]Evaluate: 100%|██████████| 4/4 [00:00<00:00, 11941.08it/s]
+
+-------------
+scores: [[False], [False], [False], [False]]
+-------------
+
+{'num_samples': 4, 'num_scores': 4, 'timeout_samples': 0, 'empty_samples': 1, 'avg_acc': 0.0, 'pass@1': 0.0}
+Saved to outputs/./outputs_quick_kv_bench/aime24/test_orz_4_seed2025_RetroInfer_budget0.018_es0.232_04-04_19-15.jsonl
+
+Pass@1:
+aime24	avg   
+0.0   	0.0   
+Random seed set as 2025
+=== Quick AIME KV Bench ===
+{
+  "model_name_or_path": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+  "seed": 2025,
+  "dtype": "fp16",
+  "max_length": 65536,
+  "accuracy_samples": 4,
+  "accuracy_max_tokens": 2048,
+  "output_dir": "./outputs_quick_kv_bench",
+  "throughput_samples": 2,
+  "decode_tokens": 6144,
+  "retrieval_budget": 0.018,
+  "estimation_budget": 0.232,
+  "cache_ratio": 0.05,
+  "buffer_cluster_num": 200,
+  "gpu_only": true,
+  "use_cuda_graph": false
+}
+
+[Accuracy] Running Full_Flash_Attn ...
+
+[Accuracy] Running RetroInfer ...
+
+[Throughput] Running Full_Flash_Attn ...
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.33it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.35it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.34it/s]
+Allocate GPU buffers and CPU pin memory ...
+Start prefilling ...
+Prefilling latency: 0.161 s
+Start decoding ...
+Decoding latency: 137.6235 s (22.4 ms/step), Throughput: 44.64 tokens/s
+End2End Latency: 137.7844 s
+
+Allocate GPU buffers and CPU pin memory ...
+Start prefilling ...
+Prefilling latency: 0.0448 s
+Start decoding ...
+Decoding latency: 137.5765 s (22.4 ms/step), Throughput: 44.65 tokens/s
+End2End Latency: 137.6213 s
+
+
+[Throughput] Running RetroInfer ...
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.34it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.35it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.35it/s]
+{'static_pattern_start': 4, 'static_pattern_end': 64, 'core': 14, 'n_centroids': 16, 'n_segment': 1, 'pages_per_cluster': 2, 'retrieval_budget': 0.018, 'estimation_budget': 0.232, 'cache_ratio': 0.05, 'buffer_cluster_num': 150, 'use_cuda_graph': False, 'gpu_only': True}
+Allocate GPU buffers and CPU pin memory ...
+Initial n_centroids: 0, nprobe: 0, es_cluster_num: 0
+Buffer size: 3200, Steady zone size: 0
+Start prefilling ...
+Prefilling latency: 0.0594 s
+Start decoding ...
+Decoding latency: 135.5488 s (22.07 ms/step), Throughput: 45.32 tokens/s
+End2End Latency: 135.6082 s
+
+{'static_pattern_start': 4, 'static_pattern_end': 64, 'core': 14, 'n_centroids': 16, 'n_segment': 1, 'pages_per_cluster': 2, 'retrieval_budget': 0.018, 'estimation_budget': 0.232, 'cache_ratio': 0.05, 'buffer_cluster_num': 150, 'use_cuda_graph': False, 'gpu_only': True}
+Allocate GPU buffers and CPU pin memory ...
+Initial n_centroids: 0, nprobe: 0, es_cluster_num: 0
+Buffer size: 3200, Steady zone size: 0
+Start prefilling ...
+Prefilling latency: 0.0455 s
+Start decoding ...
+Decoding latency: 135.5217 s (22.06 ms/step), Throughput: 45.33 tokens/s
+End2End Latency: 135.5672 s
+
+
+=== Summary ===
+Accuracy pass@1 (n=4): Full=0.0, RetroInfer=0.0
+Throughput tokens/s (fixed decode 6144, n=2): Full=44.58, RetroInfer=45.27, speedup=1.02x
+
+Artifacts:
+- Full metrics: /root/RetrievalAttention/benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_Full_Flash_Attn_budget0.018_es0.232_04-04_19-10_orz_metrics.json
+- Retro metrics: /root/RetrievalAttention/benchmark/reasoning/outputs/outputs_quick_kv_bench/aime24/test_orz_4_seed2025_RetroInfer_budget0.018_es0.232_04-04_19-15_orz_metrics.json
+WALL=20:07.98
