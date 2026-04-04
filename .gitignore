@@ -411,4 +411,30 @@ benchmark/reasoning/outputs
 !benchmark/reasoning/data/**/*.jsonl
 !asserts/*.png
 
+# Reasoning experiment archival allowlist (keep scope minimal)
+!benchmark/reasoning/outputs/
+benchmark/reasoning/outputs/*
+!benchmark/reasoning/outputs/outputs_compare_30/
+benchmark/reasoning/outputs/outputs_compare_30/*
+!benchmark/reasoning/outputs/outputs_compare_30/aime24/
+!benchmark/reasoning/outputs/outputs_compare_30/aime24/test_orz_-1_seed2025_Full_Flash_Attn_budget0.018_es0.232_04-02_05-29.jsonl
+!benchmark/reasoning/outputs/outputs_compare_30/aime24/test_orz_-1_seed2025_Full_Flash_Attn_budget0.018_es0.232_04-02_05-29_orz_metrics.json
+!benchmark/reasoning/outputs/outputs_compare_30/aime24/test_orz_-1_seed2025_RetroInfer_budget0.018_es0.232_04-02_05-54.jsonl
+!benchmark/reasoning/outputs/outputs_compare_30/aime24/test_orz_-1_seed2025_RetroInfer_budget0.018_es0.232_04-02_05-54_orz_metrics.json
+
+!benchmark/reasoning/outputs/outputs_paper_like_compare30_daemon/
+benchmark/reasoning/outputs/outputs_paper_like_compare30_daemon/*
+!benchmark/reasoning/outputs/outputs_paper_like_compare30_daemon/aime24/
+!benchmark/reasoning/outputs/outputs_paper_like_compare30_daemon/aime24/test_orz_-1_seed2025_Full_Flash_Attn_budget0.018_es0.232_04-02_17-33.jsonl
+!benchmark/reasoning/outputs/outputs_paper_like_compare30_daemon/aime24/test_orz_-1_seed2025_Full_Flash_Attn_budget0.018_es0.232_04-02_17-33_orz_metrics.json
+!benchmark/reasoning/outputs/outputs_paper_like_compare30_daemon/aime24/test_orz_-1_seed2025_RetroInfer_budget0.018_es0.232_04-03_10-53.jsonl
+!benchmark/reasoning/outputs/outputs_paper_like_compare30_daemon/aime24/test_orz_-1_seed2025_RetroInfer_budget0.018_es0.232_04-03_10-53_orz_metrics.json
+
+!benchmark/reasoning/logs/
+benchmark/reasoning/logs/*
+!benchmark/reasoning/logs/full_bs1_aime24_30.log
+!benchmark/reasoning/logs/retro_bs1_aime24_30.log
+!benchmark/reasoning/logs/full_paperlike_daemon.log
+!benchmark/reasoning/logs/retro_paperlike_daemon.log
+
 .venv/

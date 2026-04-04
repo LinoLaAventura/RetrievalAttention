@@ -1,0 +1,8 @@
+{
+    "num_samples": 30,
+    "num_scores": 30,
+    "timeout_samples": 0,
+    "empty_samples": 0,
+    "avg_acc": 6.7,
+    "pass@1": 6.7
+}
